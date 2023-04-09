@@ -34,7 +34,11 @@ application {
 
 jacoco {
     toolVersion = "0.8.8"
+<<<<<<< HEAD
    // reportsDirectory = layout.buildDirectory.dir('customJacocoReportDir')
+=======
+  //  reportsDirectory = layout.buildDirectory.dir('customJacocoReportDir')
+>>>>>>> 6d073a0915b4da10a43536f1ed7f3e9ff21feb11
 }
 
 jacocoTestReport {
