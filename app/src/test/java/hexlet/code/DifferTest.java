@@ -1,24 +1,24 @@
 package hexlet.code;
 
-//package io.hexlet.boilerplate;
+//import static com.sun.org.apache.xerces.internal.util.PropertyState.is;
 
-import static org.junit.jupiter.api.Assertions.*;
-
-import java.io.ByteArrayOutputStream;
-import java.io.PrintStream;
-import java.nio.charset.StandardCharsets;
-
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.DisplayName;
+//import com.sun.org.apache.xerces.internal.util.PropertyState;
 import org.junit.jupiter.api.Test;
 
+import java.io.IOException;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
 public class DifferTest {
+
     @Test
-    public void test1() {
-        var
-        assertEquals(Differ.generate(), Differ.generate);
+    public void assertThat() throws IOException {
+       // ObjectMapper objectMapper = new ObjectMapper();
+       // Map<String, Object> file1 = objectMapper.readValue(new File("file1.json"), Map.class);
+        String expected = "";
+        assertEquals(null, Differ.generate("file1.json"));
 
     }
+
 
 }

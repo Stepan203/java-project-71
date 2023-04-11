@@ -1,15 +1,13 @@
 package hexlet.code;
 import java.io.File;
 import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
+
 import com.fasterxml.jackson.databind.ObjectMapper;
 import java.util.*;
 
 public class Differ {
 
-    public static void generate() throws IOException {
+    public static Object generate(String s) throws IOException {
 
         ObjectMapper objectMapper = new ObjectMapper();
         Map<String, Object> file1 = objectMapper.readValue(new File("file1.json"), Map.class);
@@ -36,5 +34,6 @@ public class Differ {
       //  }
       //  System.out.println(file1);
       //  System.out.println(file2);
+        return null;
     }
 }

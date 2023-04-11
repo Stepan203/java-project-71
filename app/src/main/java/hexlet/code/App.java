@@ -20,7 +20,7 @@ public class App implements Callable<Integer> {
 
     public static void main(String[] args) throws IOException {
         int exitCode = new CommandLine(new App()).execute(args);
-        Differ.generate();
+        Differ.generate("file1.json");
         System.exit(exitCode);
     }
 
