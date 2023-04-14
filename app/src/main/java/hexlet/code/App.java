@@ -20,14 +20,14 @@ public class App implements Callable<Integer> {
 
     public static void main(String[] args) throws IOException {
         int exitCode = new CommandLine(new App()).execute(args);
-        Differ.generate("file1.json");
+        Differ.generate("file1.json", "file2.json");
         System.exit(exitCode);
     }
 
     @Override
     public Integer call() throws Exception {
-        //String result = Differ.generate(filepath1, filepath2);
-     //   System.out.println(result);
+        //Differ.generate("file1.json", "file2.json");
+        //System.out.println(result);
         System.out.println("Hello");
         return 0;
     }

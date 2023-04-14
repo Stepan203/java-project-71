@@ -4,9 +4,6 @@ run-dist:
 report:
 	./gradlew jacocoTestReport
 
-report: 
-	./gradlew jacocoTestReport
-
 build-run: build run
 
 .PHONY: build
