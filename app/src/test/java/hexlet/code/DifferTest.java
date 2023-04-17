@@ -4,7 +4,6 @@ package hexlet.code;
 
 //import com.sun.org.apache.xerces.internal.util.PropertyState;
 import org.junit.jupiter.api.Test;
-
 import java.io.IOException;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
