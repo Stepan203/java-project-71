@@ -4,10 +4,10 @@ import picocli.CommandLine;
 import picocli.CommandLine.Option;
 import java.io.IOException;
 import java.util.concurrent.Callable;
-
 @CommandLine.Command(name = "gendiff", mixinStandardHelpOptions = true, version = "1.0",
         description = "Compares two configuration files and shows a difference.")
 public class App implements Callable<Integer> {
+    private static final int SUCCESS = 0;
 
     // interface Spec {
     //@Option(names = "-c", defaultValue = "123", description = "... ${DEFAULT-VALUE} ...")
@@ -38,6 +38,6 @@ public class App implements Callable<Integer> {
         System.out.println(Differ.generate(filepath1, filepath2, format));
       //  System.out.println(Differ.generate(filepath1, filepath2, format));
         //System.out.println("Hello");
-        return null;
+        return SUCCESS;
     }
 }

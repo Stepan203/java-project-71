@@ -9,9 +9,9 @@ import java.util.Map;
 import java.util.TreeMap;
 import com.fasterxml.jackson.databind.ObjectMapper;
 public class Stylish {
-    public static String createStylish(List<Map<String, Object>> differ) throws IOException {
+    public static String format(List<Map<String, Object>> differ) throws IOException {
 
-        HashSet<String> countryHashSet = new HashSet<>();
+     //   HashSet<String> countryHashSet = new HashSet<>();
         StringBuilder sb = new StringBuilder();
         sb.append("{");
         for (Map<String, Object> element : differ) {

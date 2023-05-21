@@ -11,8 +11,8 @@ public class Formatter {
 
     public static String choiceFormat(List<Map<String, Object>> difference, String format) throws Exception {
         return switch (format) {
-                case "stylish" -> Stylish.createStylish((List<Map<String, Object>>) difference);
-                case "plain" -> Plain.createPlain((List<Map<String, Object>>) difference);
+                case "stylish" -> Stylish.format(difference);
+                case "plain" -> Plain.createPlain(difference);
                 case "json" -> Json.createJson(difference);
                 default -> throw new Exception("Wrong format: " + format);
         };
