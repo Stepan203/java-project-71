@@ -5,6 +5,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 import org.junit.jupiter.params.ParameterizedTest;
 //import com.sun.org.apache.xerces.internal.util.PropertyState;
 import org.junit.jupiter.api.Test;
+import org.skyscreamer.jsonassert.JSONAssert;
 
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -34,7 +35,7 @@ public class DifferTest {
     }
 
     @ParameterizedTest
-    @ValueSource(strings = {"json", "yaml"})
+        @ValueSource(strings = {"json", "yaml"})
     public void generateTest(String format) throws Exception {
         String filePath1 = getFixturePath("file1." + format).toString();
         String filePath2 = getFixturePath("file2." + format).toString();
@@ -51,5 +52,9 @@ public class DifferTest {
         // Json and Yaml to json
         assertThat(Differ.generate(filePath1, filePath2, "json"))
                 .isEqualTo(resultJson);
+
+        String actualJson = Differ.generate(filePath1, filePath2, "json");
+
+        JSONAssert.assertEquals(resultJson, actualJson, false);
     }
 }
