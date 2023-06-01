@@ -2,10 +2,7 @@ package hexlet.code;
 
 //import static com.sun.org.apache.xerces.internal.util.PropertyState.is;
 import static org.assertj.core.api.Assertions.assertThat;
-import org.junit.jupiter.params.ParameterizedTest;
 //import com.sun.org.apache.xerces.internal.util.PropertyState;
-import org.junit.jupiter.api.Test;
-import org.skyscreamer.jsonassert.JSONAssert;
 
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.params.ParameterizedTest;
@@ -16,7 +13,7 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 
-//@SuppressWarnings("unchecked")
+@SuppressWarnings("unchecked")
 public class DifferTest {
     private static String resultStylish;
     private static String resultPlain;
