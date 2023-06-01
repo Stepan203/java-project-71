@@ -1,7 +1,7 @@
 package hexlet.code;
 
 //import static com.sun.org.apache.xerces.internal.util.PropertyState.is;
-//import static org.assertj.core.api.Assertions.assertThat;
+import static org.assertj.core.api.Assertions.assertThat;
 //import org.junit.jupiter.params.ParameterizedTest;
 //import com.sun.org.apache.xerces.internal.util.PropertyState;
 //import org.junit.jupiter.api.Test;
