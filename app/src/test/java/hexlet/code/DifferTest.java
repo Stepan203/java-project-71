@@ -26,14 +26,14 @@ public class DifferTest {
 
     private static String getFixtureContent(String fileName) throws Exception {
         Path filePath = getFixturePath(fileName);
-        return Files.readString(filePath).trim();
+        return Files.readString(filePath).trim().replaceAll("\r", "");
     }
 
     @BeforeAll
     public static void beforeAll() throws Exception {
-        resultStylish = getFixtureContent("fixtures/result_stylish.txt");
-        resultPlain = getFixtureContent("fixtures/result_plain.txt");
-        resultJson = getFixtureContent("fixtures/result_json.json");
+        resultStylish = getFixtureContent("result_stylish.txt");
+        resultPlain = getFixtureContent("result_plain.txt");
+        resultJson = getFixtureContent("result_json.json");
     }
 
     @ParameterizedTest
