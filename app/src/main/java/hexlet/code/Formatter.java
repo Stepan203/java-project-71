@@ -2,7 +2,6 @@ package hexlet.code;
 
 import java.util.List;
 import java.util.Map;
-import com.fasterxml.jackson.databind.ObjectMapper;
 import hexlet.code.Formatters.Json;
 import hexlet.code.Formatters.Plain;
 import hexlet.code.Formatters.Stylish;
