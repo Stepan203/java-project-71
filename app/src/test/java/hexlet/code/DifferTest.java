@@ -54,7 +54,6 @@ public class DifferTest {
                 .isEqualTo(resultJson);
 
         String actualJson = Differ.generate(filePath1, filePath2, "json");
-
         JSONAssert.assertEquals(resultJson, actualJson, false);
     }
 }
