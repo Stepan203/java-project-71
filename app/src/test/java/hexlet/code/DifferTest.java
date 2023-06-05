@@ -20,13 +20,13 @@ public class DifferTest {
     private static String resultJson;
 
     private static Path getFixturePath(String fileName) {
-        return Paths.get("src", "test", "resources", fileName)
+        return Paths.get("src", "test", "resources", "fixtures", "test", fileName)
                 .toAbsolutePath().normalize();
     }
 
     private static String getFixtureContent(String fileName) throws Exception {
         Path filePath = getFixturePath(fileName);
-        return Files.readString(filePath).trim().replaceAll("\r", "");
+        return Files.readString(filePath).trim();//.replaceAll("\r", "");
     }
 
     @BeforeAll
