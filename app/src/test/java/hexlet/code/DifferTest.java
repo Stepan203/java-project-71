@@ -26,7 +26,7 @@ public class DifferTest {
 
     private static String getFixtureContent(String fileName) throws Exception {
         Path filePath = getFixturePath(fileName);
-        return Files.readString(filePath).trim();//.replaceAll("\r", "");
+        return Files.readString(filePath).trim();
     }
 
     @BeforeAll
