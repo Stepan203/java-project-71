@@ -17,9 +17,7 @@ public class Differ {
         String[] subStr;
         String delimeter = "\\.";
         subStr = file1.split(delimeter);
-        //for(int i = 0; i < subStr.length; i++) {
         System.out.println("Str " + format);
-       // }
 
         Map<String, Object> data1 = Parser.typeParser(file1, content1);
         Map<String, Object> data2 = Parser.typeParser(file2, content2);
@@ -28,7 +26,6 @@ public class Differ {
 
         System.out.println("File1 " + file1);
         return Formatter.choiceFormat(difference, format);
-       // return Formatter.choiceFormat(difference, format);
     }
 
     public static String generate(String filePath1, String filePath2) throws Exception {
