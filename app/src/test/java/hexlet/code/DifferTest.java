@@ -20,7 +20,7 @@ public class DifferTest {
     private static String resultJson;
 
     private static Path getFixturePath(String fileName) {
-        return Paths.get("src", "test", "resources", "fixtures", "test", fileName)
+        return Paths.get("src", "test", "resources", "fixtures", fileName)
                 .toAbsolutePath().normalize();
     }
 
