@@ -1,10 +1,12 @@
 package hexlet.code;
-
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.util.List;
-import java.util.Map;
+import java.io.IOException;
+
+import com.fasterxml.jackson.databind.ObjectMapper;
+import java.util.*;
+
 public class Differ {
     public static String generate(String file1, String file2, String format) throws Exception {
 
@@ -17,7 +19,9 @@ public class Differ {
         String[] subStr;
         String delimeter = "\\.";
         subStr = file1.split(delimeter);
-        System.out.println("Str " + format);
+        //for(int i = 0; i < subStr.length; i++) {
+      //  System.out.println("Str " + format);
+       // }
 
         Map<String, Object> data1 = Parser.typeParser(file1, content1);
         Map<String, Object> data2 = Parser.typeParser(file2, content2);
@@ -26,6 +30,7 @@ public class Differ {
 
         System.out.println("File1 " + file1);
         return Formatter.choiceFormat(difference, format);
+       // return Formatter.choiceFormat(difference, format);
     }
 
     public static String generate(String filePath1, String filePath2) throws Exception {
