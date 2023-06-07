@@ -26,7 +26,7 @@ public class Differ {
         Map<String, Object> data2 = Parser.typeParser(file2, content2);
         List<Map<String, Object>> difference = Difference.makeDifference(data1, data2);
 
-        System.out.println("File1 " + file1);
+      //  System.out.println("File1 " + file1);
         return Formatter.choiceFormat(difference, format);
        // return Formatter.choiceFormat(difference, format);
     }
