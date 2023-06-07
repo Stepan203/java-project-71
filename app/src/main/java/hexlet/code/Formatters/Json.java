@@ -9,6 +9,6 @@ public class Json {
     public static String createJson(List<Map<String, Object>> difference) throws IOException {
         ObjectMapper mapper = new ObjectMapper();
         String result = mapper.writeValueAsString((List<Map<String, Object>>) difference);
-        return result.trim();
+        return result;
     }
 }

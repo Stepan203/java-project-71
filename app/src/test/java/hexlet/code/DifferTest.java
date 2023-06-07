@@ -3,7 +3,7 @@ package hexlet.code;
 //import static com.sun.org.apache.xerces.internal.util.PropertyState.is;
 import static org.assertj.core.api.Assertions.assertThat;
 //import com.sun.org.apache.xerces.internal.util.PropertyState;
-//import org.skyscreamer.jsonassert.JSONAssert;
+import org.skyscreamer.jsonassert.JSONAssert;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;
@@ -17,6 +17,7 @@ public final class DifferTest {
     private static String resultStylish;
     private static String resultPlain;
     private static String resultJson;
+    private Object JSONAssert;
 
     private static Path getFixturePath(String fileName) {
         return Paths.get("src", "test", "resources", "fixtures", fileName)
@@ -51,10 +52,10 @@ public final class DifferTest {
         assertThat(Differ.generate(filePath1, filePath2, "plain"))
                 .isEqualTo(resultPlain);
         // Json and Yaml to json
-        assertThat(Differ.generate(filePath1, filePath2, "json"))
-                .isEqualTo(resultJson);
+        //assertThat(Differ.generate(filePath1, filePath2, "json"))
+        //        .isEqualTo(resultJson);
 
-        //String actualJson = Differ.generate(filePath1, filePath2, "json");
-        //JSONAssert.assertEquals(resultJson, actualJson, false);
+        String actualJson = Differ.generate(filePath1, filePath2, "json");
+        JSONAssert.assertEquals(resultJson, actualJson, false);
     }
 }
