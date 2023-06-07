@@ -2,10 +2,9 @@ package hexlet.code;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.io.IOException;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
-import java.util.*;
+import java.util.List;
+import java.util.Map;
 
 public class Differ {
     public static String generate(String file1, String file2, String format) throws Exception {

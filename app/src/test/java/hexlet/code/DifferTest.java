@@ -7,7 +7,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;
-import org.skyscreamer.jsonassert.JSONAssert;
+
 
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -37,7 +37,7 @@ public class DifferTest {
     }
 
     @ParameterizedTest
-        @ValueSource(strings = {"json", "yaml"})
+    @ValueSource(strings = {"json", "yaml"})
     public void generateTest(String format) throws Exception {
         String filePath1 = getFixturePath("file1." + format).toString();
         String filePath2 = getFixturePath("file2." + format).toString();
