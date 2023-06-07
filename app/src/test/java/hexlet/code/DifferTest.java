@@ -17,7 +17,6 @@ public final class DifferTest {
     private static String resultStylish;
     private static String resultPlain;
     private static String resultJson;
-    private Object JSONAssert;
 
     private static Path getFixturePath(String fileName) {
         return Paths.get("src", "test", "resources", "fixtures", fileName)
