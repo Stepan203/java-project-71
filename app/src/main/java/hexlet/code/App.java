@@ -6,7 +6,7 @@ import java.io.IOException;
 import java.util.concurrent.Callable;
 @CommandLine.Command(name = "gendiff", mixinStandardHelpOptions = true, version = "1.0",
         description = "Compares two configuration files and shows a difference.")
-public class App implements Callable<Integer> {
+public final class App implements Callable<Integer> {
     private static final int SUCCESS = 0;
 
     // interface Spec {
