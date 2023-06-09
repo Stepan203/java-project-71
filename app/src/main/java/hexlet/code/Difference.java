@@ -8,7 +8,7 @@ import java.util.TreeSet;
 
 public class Difference {
     public static Map<String, KeyStatus> makeDifference(Map<String, Object> firstMap, Map<String, Object> secondMap) {
-        Map<String, KeyStatus> result = new LinkedHashMap<>();//ArrayList<>();
+        Map<String, KeyStatus> result = new LinkedHashMap<>();
 
        // Set<String> keys = new TreeSet<>();
       //  keys.addAll(mapA.keySet());

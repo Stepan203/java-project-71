@@ -1,9 +1,7 @@
 package hexlet.code.Formatters;
 
 import java.io.IOException;
-
 import hexlet.code.KeyStatus;
-import java.util.List;
 import java.util.Map;
 
 

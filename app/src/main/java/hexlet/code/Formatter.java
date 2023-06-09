@@ -1,6 +1,5 @@
 package hexlet.code;
 
-import java.util.List;
 import java.util.Map;
 import hexlet.code.Formatters.Json;
 import hexlet.code.Formatters.Plain;
