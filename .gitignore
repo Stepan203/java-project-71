@@ -5,6 +5,4 @@
 build
 
 .idea/
-*.json
-*.yaml
 
