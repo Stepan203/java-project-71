@@ -18,9 +18,6 @@ public class Differ {
         String[] subStr;
         String delimeter = "\\.";
         subStr = file1.split(delimeter);
-        //for(int i = 0; i < subStr.length; i++) {
-      //  System.out.println("Str " + format);
-       // }
         Map<String, Object> data1 = Parser.typeParser(file1, content1);
         Map<String, Object> data2 = Parser.typeParser(file2, content2);
         List<Map<String, Object>> difference = Difference.makeDifference(data1, data2);
