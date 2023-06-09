@@ -10,40 +10,6 @@ public class Plain {
     public static String createPlain(Map<String, KeyStatus> differ) throws IOException {
         StringBuilder str = new StringBuilder();
         for (Map.Entry<String, KeyStatus> element : differ.entrySet()) {
-            /* if (element.get("status").equals("deleted")) {
-                plain.append("Property '")
-                        .append(element.get("key"))
-                        .append("' was removed")
-                        .append("\n");
-            } else if (element.get("status").equals("added")) {
-                plain.append("Property '")
-                        .append(element.get("key"))
-                        .append("' was added with value: ")
-                        .append(checkValue(element.get("newValue")))
-                        .append("\n");
-            } else if (element.get("status").equals("changed")) {
-                plain.append("Property '")
-                        .append(element.get("key"))
-                        .append("' was updated. From ")
-                        .append(checkValue(element.get("oldValue")))
-                        .append(" to ")
-                        .append(checkValue(element.get("newValue")))
-                        .append("\n");
-            }
-        }
-        return plain.toString().trim();
-    }
-    public static String checkValue(Object value) {
-        if (value instanceof Map || value instanceof List) {
-            return "[complex value]";
-        } else if (value == null) {
-            return null;
-        } else if (value instanceof String) {
-            return "'" + value + "'";
-        } else {
-            return value.toString();
-        }*/
-
             String status = element.getValue().getStatus();
             String key = element.getKey();
             var value1 = element.getValue().getValue1();

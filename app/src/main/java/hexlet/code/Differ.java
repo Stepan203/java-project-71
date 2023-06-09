@@ -3,9 +3,7 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 
-
 import java.util.Map;
-
 public class Differ {
     public static String generate(String file1, String file2, String format) throws Exception {
 
@@ -22,11 +20,8 @@ public class Differ {
         Map<String, Object> data2 = Parser.typeParser(file2, content2);
         Map<String, KeyStatus> difference = Difference.makeDifference(data1, data2);
 
-      //  System.out.println("File1 " + file1);
         return Formatter.choiceFormat(difference, format);
-       // return Formatter.choiceFormat(difference, format);
     }
-
     public static String generate(String filePath1, String filePath2) throws Exception {
         String format = "stylish";
         return generate(filePath1, filePath2, format);
