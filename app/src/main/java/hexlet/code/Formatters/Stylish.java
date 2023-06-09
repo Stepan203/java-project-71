@@ -10,7 +10,7 @@ public class Stylish {
 
      //   HashSet<String> countryHashSet = new HashSet<>();
         StringBuilder str = new StringBuilder();
-        str.append("{");
+        str.append("{\n");
         for (Map.Entry<String, KeyStatus> element : differ.entrySet()) {
 
             String status = element.getValue().getStatus();
