@@ -8,7 +8,7 @@ import hexlet.code.Formatters.Stylish;
 
 public class Formatter {
 
-    public static String choiceFormat(List<Map<String, Object>> difference, String format) throws Exception {
+    public static String choiceFormat(Map<String, KeyStatus> difference, String format) throws Exception {
         return switch (format) {
             case "stylish" -> Stylish.format(difference);
             case "plain" -> Plain.createPlain(difference);

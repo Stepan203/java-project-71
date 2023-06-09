@@ -4,11 +4,12 @@ import java.io.IOException;
 import java.util.List;
 import java.util.Map;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import hexlet.code.KeyStatus;
 
 public class Json {
-    public static String createJson(List<Map<String, Object>> difference) throws IOException {
+    public static String createJson(Map<String, KeyStatus> difference) throws IOException {
         ObjectMapper mapper = new ObjectMapper();
-        return mapper.writeValueAsString((List<Map<String, Object>>) difference);
-        //return result;
+        String result = mapper.writeValueAsString(difference);
+        return result;
     }
 }
