@@ -29,7 +29,6 @@ public class Difference {
                 diffMap.put("key", key);
                 diffMap.put("status", "added");
                 diffMap.put("newValue", mapB.get(key));
-                System.out.println(mapB.get(key));
             } else if (mapA.containsKey(key) && mapB.containsKey(key) && Objects.equals(valueA, valueB)) {
                 diffMap.put("key", key);
                 diffMap.put("status", "unchanged");
