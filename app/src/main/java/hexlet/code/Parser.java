@@ -1,6 +1,5 @@
 package hexlet.code;
 
-import java.util.HashMap;
 import java.util.Map;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.dataformat.yaml.YAMLFactory;
@@ -20,7 +19,7 @@ public class Parser {
       //  }
       //  return map;
 
-        switch(extension) {
+        switch (extension) {
             case "json":
                 ObjectMapper mapper;
                 mapper = new ObjectMapper();

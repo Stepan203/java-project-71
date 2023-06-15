@@ -1,9 +1,7 @@
 package hexlet.code.formatters;
 
 import hexlet.code.KeyStatus;
-import java.lang.reflect.Array;
 import java.io.IOException;
-import java.util.List;
 import java.util.Map;
 
 public class Plain {
