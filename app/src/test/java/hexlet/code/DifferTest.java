@@ -40,7 +40,7 @@ public final class DifferTest {
     public void generateTest(String format) throws Exception {
         String filePath1 = getFixturePath("file1." + format).toString();
         String filePath2 = getFixturePath("file2." + format).toString();
-
+        System.out.println("File1 " + Differ.generate(filePath1, filePath2));
         // Json and Yaml to stylish as default
         assertThat(Differ.generate(filePath1, filePath2))
                 .isEqualTo(resultStylish);
