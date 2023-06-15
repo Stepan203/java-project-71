@@ -1,4 +1,4 @@
-package hexlet.code.Formatters;
+package hexlet.code.formatters;
 
 import hexlet.code.KeyStatus;
 import java.lang.reflect.Array;
@@ -7,7 +7,7 @@ import java.util.List;
 import java.util.Map;
 
 public class Plain {
-    public static String createPlain(Map<String, KeyStatus> differ) throws IOException {
+    public static String format(Map<String, KeyStatus> differ) throws IOException {
         StringBuilder str = new StringBuilder();
         for (Map.Entry<String, KeyStatus> element : differ.entrySet()) {
             String status = element.getValue().getStatus();
@@ -37,11 +37,6 @@ public class Plain {
 
         if (value instanceof String) {
             return "'" + value + "'";
-        } else if (value instanceof Map || value instanceof Array || value instanceof List) {
-            return "[complex value]";
-        } else if (value == null) {
-
-            return "null";
         }
         return String.valueOf(value);
     }

@@ -50,6 +50,10 @@ public final class DifferTest {
         // Json and Yaml to plain
         assertThat(Differ.generate(filePath1, filePath2, "plain"))
                 .isEqualTo(resultPlain);
+        // Json and Yaml to json
+        //assertThat(Differ.generate(filePath1, filePath2, "json"))
+        //        .isEqualTo(resultJson);
+
         String actualJson = Differ.generate(filePath1, filePath2, "json");
         JSONAssert.assertEquals(resultJson, actualJson, false);
     }

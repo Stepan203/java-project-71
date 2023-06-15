@@ -3,6 +3,7 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 
+import java.util.Arrays;
 import java.util.Map;
 public class Differ {
     public static String generate(String file1, String file2, String format) throws Exception {
@@ -16,10 +17,10 @@ public class Differ {
         String[] subStr;
         String delimeter = "\\.";
         subStr = file1.split(delimeter);
-        Map<String, Object> data1 = Parser.typeParser(file1, content1);
-        Map<String, Object> data2 = Parser.typeParser(file2, content2);
+        String extension = subStr[subStr.length - 1];
+        Map<String, Object> data1 = Parser.parse(extension, content1);
+        Map<String, Object> data2 = Parser.parse(extension, content2);
         Map<String, KeyStatus> difference = Difference.makeDifference(data1, data2);
-
         return Formatter.choiceFormat(difference, format);
     }
     public static String generate(String filePath1, String filePath2) throws Exception {
