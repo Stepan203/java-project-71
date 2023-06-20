@@ -35,7 +35,6 @@ public class Plain {
     }
     private static String prepareValues(Object value) {
 
-       // if (value instanceof String) {
         if (value instanceof Map || value instanceof List) {
             return "[complex value]";
         } else if (value == null) {
@@ -45,6 +44,5 @@ public class Plain {
         } else {
             return value.toString();
         }
-       // }
     }
 }
