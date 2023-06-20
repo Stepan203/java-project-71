@@ -36,15 +36,15 @@ public class Plain {
     private static String prepareValues(Object value) {
 
        // if (value instanceof String) {
-            if (value instanceof Map || value instanceof List) {
-                return "[complex value]";
-            } else if (value == null) {
-                return null;
-            } else if (value instanceof String) {
-                return "'" + value + "'";
-            } else {
-                return value.toString();
-            }
+        if (value instanceof Map || value instanceof List) {
+            return "[complex value]";
+        } else if (value == null) {
+            return null;
+        } else if (value instanceof String) {
+            return "'" + value + "'";
+        } else {
+            return value.toString();
+        }
        // }
     }
 }
