@@ -21,14 +21,10 @@ public class Parser {
 
         switch (extension) {
             case "json":
-                ObjectMapper mapper;
-                mapper = new ObjectMapper();
-                return mapper.readValue(content, Map.class);
+                return new ObjectMapper().readValue(content, Map.class);
             case "yml":
             case "yaml":
-               // ObjectMapper mapper;
-                mapper = new ObjectMapper(new YAMLFactory());
-                return mapper.readValue(content, Map.class);
+                return new ObjectMapper(new YAMLFactory()).readValue(content, Map.class);
             default:
                 throw new RuntimeException("No parser for extension: " + extension);
         }

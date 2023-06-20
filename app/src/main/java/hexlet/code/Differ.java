@@ -13,14 +13,18 @@ public class Differ {
         String content1 = Files.readString(fullPath1);
         String content2 = Files.readString(fullPath2);
 
-        String[] subStr;
-        String delimeter = "\\.";
-        subStr = file1.split(delimeter);
-        String extension = subStr[subStr.length - 1];
-        Map<String, Object> data1 = Parser.parse(extension, content1);
-        Map<String, Object> data2 = Parser.parse(extension, content2);
+
+        Map<String, Object> data1 = Parser.parse(getExtension(file1), content1);
+        Map<String, Object> data2 = Parser.parse(getExtension(file1), content2);
         Map<String, KeyStatus> difference = Difference.makeDifference(data1, data2);
         return Formatter.choiceFormat(difference, format);
+    }
+    public static String getExtension(String file1) throws Exception {
+        String[] fileParts;
+        String delimeter = "\\.";
+        fileParts = file1.split(delimeter);
+        String extension = fileParts[fileParts.length - 1];
+        return extension;
     }
     public static String generate(String filePath1, String filePath2) throws Exception {
         String format = "stylish";

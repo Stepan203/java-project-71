@@ -3,6 +3,7 @@ package hexlet.code.formatters;
 import hexlet.code.KeyStatus;
 import java.io.IOException;
 import java.util.Map;
+import java.util.List;
 
 public class Plain {
     public static String format(Map<String, KeyStatus> differ) throws IOException {
@@ -23,7 +24,8 @@ public class Plain {
                         .append(valueResult2).append("\n");
                 case "changed" -> str.append("Property " + "'").append(key).append("'").append(" was updated. ")
                         .append("From ").append(valueResult1).append(" to ").append(valueResult2).append("\n");
-                case "unchanged" -> { }
+                case "unchanged" -> {
+                }
                 default -> {
                     return "Something went wrong for input: " + element.getValue();
                 }
@@ -33,9 +35,16 @@ public class Plain {
     }
     private static String prepareValues(Object value) {
 
-        if (value instanceof String) {
-            return "'" + value + "'";
-        }
-        return String.valueOf(value);
+       // if (value instanceof String) {
+            if (value instanceof Map || value instanceof List) {
+                return "[complex value]";
+            } else if (value == null) {
+                return null;
+            } else if (value instanceof String) {
+                return "'" + value + "'";
+            } else {
+                return value.toString();
+            }
+       // }
     }
 }
