@@ -37,11 +37,19 @@ test {
     finalizedBy jacocoTestReport
 }
 
+testlogger {
+    showStandardStreams true
+}
+
 jacocoTestReport {
     reports {
         xml.required = true
-    }
 }
+    
 compileJava {
     options.release = 17
+}
+    
+checkstyle {
+    toolVersion '10.2'
 }
