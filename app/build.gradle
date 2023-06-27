@@ -29,12 +29,12 @@ dependencies {
     implementation 'commons-io:commons-io:2.6'
 }
 
-test {
-    useJUnitPlatform()
-}
-
 application {
     mainClass = 'hexlet.code.App'
+}
+test {
+    useJUnitPlatform()
+    finalizedBy jacocoTestReport
 }
 
 jacocoTestReport {
@@ -42,6 +42,17 @@ jacocoTestReport {
         xml.required = true
     }
 }
+//test {
+//    useJUnitPlatform()
+//}
+
+//jacocoTestReport {
+//    reports {
+//        xml.required = true
+//        html.required = true
+//    }
+//}
+    
 compileJava {
     options.release = 17
 }

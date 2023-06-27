@@ -9,11 +9,6 @@ import java.util.concurrent.Callable;
 public final class App implements Callable<Integer> {
     private static final int SUCCESS = 0;
 
-    // interface Spec {
-    //@Option(names = "-c", defaultValue = "123", description = "... ${DEFAULT-VALUE} ...")
-    //int count();
-    //}
-
     @Option(names = {"-f", "--format"}, defaultValue = "stylish",
             description = "output format [default: ${DEFAULT-VALUE}]", paramLabel = "format")
     private String format;
