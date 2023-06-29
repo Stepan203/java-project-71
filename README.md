@@ -4,11 +4,11 @@
 [![Test Coverage](https://api.codeclimate.com/v1/badges/bfe5c2952e09418a3911/test_coverage)](https://codeclimate.com/github/Stepan203/java-project-71/test_coverage)
 [![Java CI](https://github.com/Stepan203/java-project-71/actions/workflows/main.yml/badge.svg)](https://github.com/Stepan203/java-project-71/actions)
 
-Описание
+## Описание
 
 Консольная утилита, определяющая разницу между двумя структурами данных.
 
-Возможности утилиты:
+### Возможности утилиты:
 
 Поддержка разных входных форматов: yaml/yml и json
 Генерация отчета в виде plain text, stylish и json
