@@ -5,9 +5,11 @@
 [![Java CI](https://github.com/Stepan203/java-project-71/actions/workflows/main.yml/badge.svg)](https://github.com/Stepan203/java-project-71/actions)
 
 Описание
+
 Консольная утилита, определяющая разницу между двумя структурами данных.
 
 Возможности утилиты:
+
 Поддержка разных входных форматов: yaml/yml и json
 Генерация отчета в виде plain text, stylish и json
 
